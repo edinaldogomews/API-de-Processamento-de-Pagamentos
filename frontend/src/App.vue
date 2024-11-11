@@ -1,26 +1,56 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <header>
+      <h1>Zro Bank - Processamento de Pagamentos</h1>
+    </header>
+    <main>
+      <PagamentoForm />
+      <PagamentoList />
+    </main>
+    <footer>
+    </footer>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PagamentoForm from './components/PagamentoForm.vue';
+import PagamentoList from './components/PagamentoList.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    PagamentoForm,
+    PagamentoList,
+  },
+};
 </script>
 
 <style>
-#app {
+body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  margin: 0;
+  background-color: #f5f5f5;
   color: #2c3e50;
-  margin-top: 60px;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #007BFF; /* Azul */
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 </style>
